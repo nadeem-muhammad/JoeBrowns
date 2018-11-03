@@ -1,0 +1,22 @@
+
+// Font Family 
+$roboto:    	'Roboto', sans-serif;
+$raleway:    	'Raleway', sans-serif;
+
+
+$p-color: 			#212121; // Primary Color
+$t-color: 			#fe5555; // Theme Color
+$b-color: 			#4d4d4d; // Border Color
+$gray-color: 		#aaaaaa; // Gray
+$boxShadow: 	0 1px 5px rgba(0,0,0,0.1);
+
+$white:			#ffffff;
+
+
+
+// Responsive Media Query
+$medium_device : 'only screen and (min-width: 992px) and (max-width: 1200px)';
+$tab_device:'only screen and (min-width: 768px) and (max-width: 991px)';
+$small_mobile:'(max-width: 767px)';
+$large_mobile: 'only screen and (min-width: 480px) and (max-width: 767px)';
+$m_menu:'(max-width: 1024px)';

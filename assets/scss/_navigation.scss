@@ -1,0 +1,101 @@
+
+
+/*
+	Navigation
+=========================== */
+.mobile-menu.dextop_off {
+	display: none;
+}
+.main_menu ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	@include d-flex();
+	@include justify-content(flex-start);
+	@include align-items(center);
+	li{
+		position: relative;
+		a{
+			padding: 15px 20px;
+			display: block;
+			color: $white;
+		}
+		&.active a{
+			color: $t-color;
+		}
+		&:hover > a {
+			color: $t-color; 
+		}
+		&:hover > ul{
+			@include Opacity(1);
+			visibility: visible;
+			top: 100%;
+		}
+
+	}
+
+	& > li:first-child {
+		a{
+			padding-left: 0;
+		}
+	}
+
+	// Dropdown Menu
+	ul {
+		position: absolute;
+		top: 115%;
+		left: 0;
+		background: $white;
+		min-width: 220px;
+		visibility: hidden;
+		z-index: 2;
+		display: inherit;
+		border-top: 3px solid $t-color;
+		@include Transition(.3s);
+		@include Opacity(0);
+		@include boxShadow(rgba(0,0,0,0.1));
+		li{
+			display: block;
+			a{
+				padding: 5px 15px;
+				color: $p-color;
+				font-size: 15px;
+			}
+			&:hover > ul{
+				top: 0;
+				visibility: visible;
+				@include Opacity(1);
+			}
+		}
+		ul{
+			left: 100%;
+			@include Opacity(0);
+			visibility: hidden;
+		}
+
+		& > li:first-child {
+			a{
+				padding-left: 15px;
+			}
+		}
+	}
+
+	
+}
+
+
+.sticky {
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background: $p-color;
+	//box-shadow: 0 1px 3px rgba(50, 50, 50, 0.4) -webkit-animation: 300ms ease-in-out 0s normal none 1 running fadeInDown;
+	box-shadow: 0 3px 7px rgba(25, 25, 25, 0.2);
+	animation: 300ms ease-in-out 0s normal none 1 running fadeInDown;
+	z-index: 9999;
+}
+
+@media only screen and (max-width: 1024px) { 
+
+}
